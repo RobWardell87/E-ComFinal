@@ -45,7 +45,6 @@ const Book = ({ book }) => {
         </>
       ) : (
         <>
-          
           <div className="book__img--skeleton"></div>
           <div className="skeleton book__title--skeleton"></div>
           <div className="skeleton book__rating--skeleton"></div>
@@ -56,4 +55,4 @@ const Book = ({ book }) => {
   );
 };
 
-export default Book
+export default Book;

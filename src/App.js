@@ -23,21 +23,21 @@ function App() {
               ...item,
               quantity: +quantity,
             }
-          : item
+          : item,
       ),
     );
   }
 
   function removeItem(item) {
-    setCart(cart.filter(book => book.id !== item.id))
+    setCart(cart.filter((book) => book.id !== item.id));
   }
 
   function numberOfItems() {
-    let counter = 0
-    cart.forEach(item => {
-      counter += item.quantity
-    })
-    return counter
+    let counter = 0;
+    cart.forEach((item) => {
+      counter += item.quantity;
+    });
+    return counter;
   }
 
   useEffect(() => {}, [cart]);
@@ -45,7 +45,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav numberOfItems={numberOfItems()}/>
+        <Nav numberOfItems={numberOfItems()} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/books" element={<Books books={books} />} />
@@ -58,16 +58,15 @@ function App() {
           <Route
             path="/cart"
             element={
-              <Cart 
-              books={books} 
-              cart={cart} 
-              changeQuantity={changeQuantity} 
-              removeItem={removeItem}
+              <Cart
+                books={books}
+                cart={cart}
+                changeQuantity={changeQuantity}
+                removeItem={removeItem}
               />
             }
           />
         </Routes>
-        
       </div>
     </Router>
   );
