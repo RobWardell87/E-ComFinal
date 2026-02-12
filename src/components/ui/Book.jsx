@@ -8,7 +8,8 @@ const Book = ({ book }) => {
 
   const mountedRef = useRef(true);
 
-  useEffect(() => {
+useEffect(() => {
+    mountedRef.current = true;
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
@@ -22,6 +23,7 @@ const Book = ({ book }) => {
       mountedRef.current = false;
     };
   });
+
 
   return (
     <div className="book">
