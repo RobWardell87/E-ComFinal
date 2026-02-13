@@ -4,7 +4,7 @@ import Highlights from "../components/Highlights";
 import Featured from "../components/Featured";
 import Discounted from "../components/Discounted";
 import Explore from "../components/Explore";
-
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
@@ -13,6 +13,7 @@ const Home = () => {
       <Featured />
       <Discounted />
       <Explore />
+      <Footer />
     </>
   );
 };
